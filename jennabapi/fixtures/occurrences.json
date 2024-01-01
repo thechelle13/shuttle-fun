@@ -1,6 +1,6 @@
 [
     {
-        "model": "jennabapi.frequency",
+        "model": "jennabapi.occurrence",
         "pk": 1,
         "fields": {
          "label": "Monthly"
@@ -9,7 +9,7 @@
       },
 
       {
-        "model": "jennabapi.frequency",
+        "model": "jennabapi.occurrence",
         "pk": 2,
         "fields": {
          
@@ -17,7 +17,7 @@
         }
       }, 
       {
-        "model": "jennabapi.frequency",
+        "model": "jennabapi.occurrence",
         "pk": 3,
         "fields": {
          
@@ -26,7 +26,7 @@
         }
       }, 
       {
-        "model": "jennabapi.frequency",
+        "model": "jennabapi.occurrence",
         "pk": 3,
         "fields": {
          
