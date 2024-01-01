@@ -10,7 +10,7 @@
           "service_date": "2023-01-01", 
           "pay": 350.00,
           "vehicle": 1,
-          "client": "Travel Group, Inc.",
+          "client": 1,
           "description": "The drive will include three clients with large cargo."
         }
       }

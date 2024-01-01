@@ -1,0 +1,11 @@
+[
+{
+    "model": "jennabapi.client",
+    "pk": 1,
+    "fields": {
+        "name": "Client A",
+        "service_date": "2023-01-15",
+        "fee": 500.00
+    }
+}
+]
