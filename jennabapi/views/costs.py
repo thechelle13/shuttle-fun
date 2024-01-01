@@ -14,7 +14,7 @@ class CostSerializer(serializers.ModelSerializer):
     
       class Meta:
         model = Cost
-        fields = ["id", "type","price", "occurrence"]
+        fields = ["id", "label","price", "occurrence"]
         
 class CostViewSet(viewsets.ViewSet):
     def list(self, request):
@@ -33,7 +33,7 @@ class CostViewSet(viewsets.ViewSet):
         
     def create(self, request):
         # Get the data from the client's JSON payload
-        type = request.data.get("type")
+        label = request.data.get("label")
         price = request.data.get("price")
         occurrence = request.data.get("occurrence")
 
@@ -41,7 +41,7 @@ class CostViewSet(viewsets.ViewSet):
         # primary key to work with
         cost = Cost.objects.create(
             
-            type=type, 
+            label=label, 
             price=price,
             occurrence=occurrence,
         )

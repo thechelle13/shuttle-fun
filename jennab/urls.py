@@ -15,8 +15,31 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from jennabapi.views import (
+    ClientViewSet,
+    UserViewSet,
+    JobViewSet,
+    CostViewSet,
+    OccurrenceViewSet,
+    VehicleViewSet,
+    
+)
+
+router = DefaultRouter(trailing_slash=False)
+router.register(r"clients", ClientViewSet, basename="client")
+router.register(r"costs", CostViewSet, basename="costs")
+router.register(r"vehicles", VehicleViewSet, basename="vehicles")
+router.register(r"users", UserViewSet, basename="users")
+router.register(r"users/shuttleusers", UserViewSet, basename="shuttleusers")
+router.register(r"jobs", JobViewSet, basename="jobs")
+router.register(r"occurrences", OccurrenceViewSet, basename="occurrences")
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("", include(router.urls)),
+    path("login", UserViewSet.as_view({"post": "user_login"}), name="login"),
+    path(
+        "register", UserViewSet.as_view({"post": "register_account"}), name="register"
+    ),
 ]

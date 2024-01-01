@@ -14,7 +14,7 @@ class VehicleSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Vehicle
-        fields = ["id", "label", "cost_id"]
+        fields = ["id", "label"]
         
     
 class VehicleViewSet(viewsets.ViewSet):
@@ -35,7 +35,7 @@ class VehicleViewSet(viewsets.ViewSet):
     def create(self, request):
         # Get the data from the client's JSON payload
         label = request.data.get("label")
-        cost_id = request.data.get("cost_id")
+        # cost_id = request.data.get("cost_id")
       
 
         # Create a comment database row first, so you have a
@@ -43,7 +43,7 @@ class VehicleViewSet(viewsets.ViewSet):
         vehicle = Vehicle.objects.create(
             
             label=label, 
-            cost_id=cost_id,
+            # cost_id=cost_id,
        
         )
 
