@@ -3,18 +3,16 @@
         "model": "jennabapi.job",
         "pk": 1,
         "fields": {
-          "shuttle_user": 1,  
-          "title": "Drive from Hotel to Airport",
-          "distance": 36.5,
-          "publication_date": "2023-01-01",
-          "service_date": "2023-01-01", 
-          "pay": 350.00,
-          "vehicle": 1,
-          "client": 1,
-          "description": "The drive will include three clients with large cargo.",
-          "approved": true
+            "shuttle_user": 1,
+            "title": "Drive from Hotel to Airport",
+            "client": 1,
+            "publication_date": "2023-01-01",
+            "service_date": "2023-01-01",
+            "description": "The drive will include three clients with large cargo.",
+            "approved": true,
+            "distance": 36.5,
+            "pay": 350.00,
+            "vehicle": 1
         }
-      }
-
-
-  ]
+    }
+]
