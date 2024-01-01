@@ -1,0 +1,20 @@
+[
+  
+    {
+      "model": "auth.user",
+      "pk": 1,
+      "fields": {
+        "password": "pbkdf2_sha256$600000$7Cx3EaHS3DiZco5MD4GWVk$+eFWan5i1n0zcoNCjxZS8Lywck7ly0e5tdpMA2PKa8Q=",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "Michelle",
+        "last_name": "Totherow",
+        "email": "michelle@email.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-11-16T17:13:29.410Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    }
+]

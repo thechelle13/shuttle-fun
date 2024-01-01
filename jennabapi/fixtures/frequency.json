@@ -1,0 +1,39 @@
+[
+    {
+        "model": "jennabapi.frequency",
+        "pk": 1,
+        "fields": {
+         "label": "Monthly"
+      
+        }
+      },
+
+      {
+        "model": "jennabapi.frequency",
+        "pk": 2,
+        "fields": {
+         
+          "label": "Daily"
+        }
+      }, 
+      {
+        "model": "jennabapi.frequency",
+        "pk": 3,
+        "fields": {
+         
+          "label": "Weekly"
+      
+        }
+      }, 
+      {
+        "model": "jennabapi.frequency",
+        "pk": 3,
+        "fields": {
+         
+          "label": "Hourly"
+      
+        }
+      }
+
+
+  ]

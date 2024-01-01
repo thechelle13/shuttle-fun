@@ -1,0 +1,58 @@
+[
+    {
+        "model": "jennabapi.cost",
+        "pk": 1,
+        "fields": {
+         
+          "label": "Insurance", 
+          "price": 300.00,
+         "frequency": 3
+      
+        }
+      },
+
+      {
+        "model": "jennabapi.cost",
+        "pk": 2,
+        "fields": {
+         
+          "label": "Fuel", 
+          "price": 50.00,
+          "frequency": 2
+        }
+      }, 
+      {
+        "model": "jennabapi.cost",
+        "pk": 3,
+        "fields": {
+         
+          "label": "Cleaning", 
+          "price": 300.00,
+          "frequency": 1
+      
+        }
+      }, 
+      {
+        "model": "jennabapi.cost",
+        "pk": 4,
+        "fields": {
+         
+          "label": "Maintenance", 
+          "price": 300.00,
+          "frequency": 1
+      
+        }
+      }, 
+      {
+        "model": "jennabapi.cost",
+        "pk": 5,
+        "fields": {
+         
+          "label": "Repair", 
+          "price": 300.00,
+          "frequency": 1
+      
+        }
+      }
+
+  ]

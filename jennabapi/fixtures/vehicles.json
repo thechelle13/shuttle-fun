@@ -1,0 +1,11 @@
+[
+    {
+      "model": "jennabapi.vehicle",
+      "pk": 1,
+      "fields": {
+        "label": "Ford E-250",
+        "cost_id": 2
+
+      }
+    }
+  ]
