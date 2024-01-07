@@ -14,5 +14,7 @@ class Job(models.Model):
     service_date = models.DateField()
     description = models.CharField(max_length=200)
     approved = models.BooleanField()
+    distance = models.DecimalField(max_digits=5, decimal_places=2, default=0.0)
+    pay = models.DecimalField(max_digits=8, decimal_places=2)
     vehicle = models.ForeignKey(Vehicle, on_delete=models.CASCADE, related_name="jobs")
    
