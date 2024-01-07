@@ -7,8 +7,8 @@
         "bio": "my bio",
         "created_on": "2023-11-21T05:14:44.231Z",
         "active": true,
-        "user": 1, 
-        "rate": 20.00
+        "user": 1
+        
       }
     }
   ]
