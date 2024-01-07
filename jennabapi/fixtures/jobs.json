@@ -11,7 +11,8 @@
           "pay": 350.00,
           "vehicle": 1,
           "client": 1,
-          "description": "The drive will include three clients with large cargo."
+          "description": "The drive will include three clients with large cargo.",
+          "approved": true
         }
       }
 
