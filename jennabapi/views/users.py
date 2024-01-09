@@ -13,7 +13,7 @@ from jennabapi.models import ShuttleUser
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ["id", "password", "first_name", "last_name", "email"]
+        fields = ["id", "username", "password", "first_name", "last_name", "email"]
         extra_kwargs = {"password": {"write_only": True}}
         
 class ShuttleUserSerializer(serializers.ModelSerializer):
@@ -100,12 +100,12 @@ class UserViewSet(viewsets.ViewSet):
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
             user = User.objects.create_user(
-                # username=serializer.validated_data["username"],
+                username=serializer.validated_data["username"],
                 password=serializer.validated_data["password"],
                 first_name=serializer.validated_data["first_name"],
                 last_name=serializer.validated_data["last_name"],
                 email=serializer.validated_data["email"],
-                # email=serializer.validated_data["email"],
+                # email=serializer.validated_data["username"],
             )
             shuttle_user = ShuttleUser.objects.create(
                 user=user,
@@ -118,10 +118,10 @@ class UserViewSet(viewsets.ViewSet):
 
     @action(detail=False, methods=["post"], url_path="login")
     def user_login(self, request):
-        email = request.data.get("email")
+        username = request.data.get("username")
         password = request.data.get("password")
 
-        user = authenticate(email=email, password=password)
+        user = authenticate(username=username, password=password)
 
         if user:
             token = Token.objects.get(user=user)
